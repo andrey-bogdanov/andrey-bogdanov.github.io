@@ -57,10 +57,6 @@ return offset
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>In development</p>
-      </header>
       <Tree data={data}
       nodeContent={node}
       yOffset={50}
