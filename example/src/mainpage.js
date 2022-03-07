@@ -61,7 +61,7 @@ class MainPage extends Component {
         <div className="tree-container">
           <Tree data={data}
           nodeContent={node}
-          yOffset={50}
+          yOffset={51}
           xOffset={xOffset}
           nodeWidth={100}
           nodeHeight={25}
