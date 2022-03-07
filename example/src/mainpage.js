@@ -63,8 +63,8 @@ class MainPage extends Component {
           nodeContent={node}
           yOffset={50}
           xOffset={xOffset}
-          nodeWidth={150}
-          nodeHeight={50}
+          nodeWidth={100}
+          nodeHeight={25}
           pathShape={"bezier"}
           />
         </div>  
