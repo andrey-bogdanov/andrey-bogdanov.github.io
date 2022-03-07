@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Tree } from "tree-graph-flex"
+import MainPage from './main.page';
 
 const data = {
   id: "0",
@@ -56,15 +57,18 @@ return offset
 
 function App() {
   return (
-    <div className="App">
-      <Tree data={data}
-      nodeContent={node}
-      yOffset={50}
-      xOffset={xOffset}
-      nodeWidth={150}
-      nodeHeight={50}
-      pathShape={"bezier"}
-    />     
+    <div>
+      <MainPage/>
+      <div className="App">
+        <Tree data={data}
+        nodeContent={node}
+        yOffset={50}
+        xOffset={xOffset}
+        nodeWidth={150}
+        nodeHeight={50}
+        pathShape={"bezier"}
+      />     
+      </div>
     </div>
   );
 }
