@@ -1,12 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
-// import { Tree } from "tree-graph-flex"
-import MainPage from './mainpage';
-
+import MainPage from './mainPage';
 
 function App() {
   return (     
-  <div className="App">
+  <div>
     <MainPage/>
   </div> )
 }

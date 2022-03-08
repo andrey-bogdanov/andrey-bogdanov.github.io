@@ -1,10 +1,63 @@
 .main-page {
-  position: relative;
-  max-width: 1170px;
   height: auto;
-  display: flex;
+  margin: 20px auto auto auto;
+  position: relative;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 330px 215px auto;
+  grid-column-gap: 10px;
+  position: relative;
+}
+
+.content-container {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(173, 173, 173);
+  border-radius: 5px;
+}
+
+.submit-bottom {
+  margin-top: 20px;
+}
+
+.fild-name {
+  margin: 5px 0 5px 0;
+}
+
+.container-header {
+  font-weight: bold;
+}
+
+.props-container {
+  padding-left: 10px;
 }
 
 .tree-container {
-  position: relative;
+  padding: 2%;
+}
+
+.data-container {
+  padding-left: 10px;
+}
+
+.json-pretty {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.json-string {
+  color: #6caedd;
+}
+
+.json-key {
+  color: #ec5f67;
+}
+
+.json-boolean {
+  color: #99c794;
+}
+
+.json-number {
+  color: #99c794;
 }
