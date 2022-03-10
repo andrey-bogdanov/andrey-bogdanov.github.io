@@ -14,10 +14,7 @@
   border-width: 1px;
   border-color: rgb(173, 173, 173);
   border-radius: 5px;
-}
-
-.submit-bottom {
-  margin-top: 20px;
+  padding: 10px;
 }
 
 .fild-name {
@@ -28,21 +25,33 @@
   font-weight: bold;
 }
 
-.props-container {
-  padding-left: 10px;
-}
-
-.tree-container {
-  padding: 2%;
-}
-
-.data-container {
-  padding-left: 10px;
-}
-
 .input-prop {
   width: 185px;
 }
+/* ------------------------- dropdown menu start--------------------- */
+
+.dropdown:hover .dropdown-content{
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown-content div:hover {background-color: rgb(243, 243, 243);}
+
+.dropdown-content {
+  display: none;
+  border-style: solid;
+  border-color: rgb(173, 173, 173);
+  border-radius: 4px;
+  width: 190px;
+  border-width: 1px;
+}
+
+.dropdown-content div {
+  padding: 3px 3px;
+  font-size: 13px;
+}
+
+/* ------------------------- dropdown menu end --------------------- */
 
 .json-pretty {
   padding-left: 30px;
@@ -65,3 +74,4 @@
 .json-number {
   color: #99c794;
 }
+/* ------------------------- json-pretty end--------------------- */

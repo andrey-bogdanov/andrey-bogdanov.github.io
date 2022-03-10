@@ -4,9 +4,9 @@ import "./mainPage.css"
 import { data, dataJson } from "./exampleData"
 import prettyHtml from "json-pretty-html"
 
-function node(node) { 
+function node(node) {
   return (
-    <div> 
+    <div>
       {node.subject}
     </div>
   )
@@ -21,7 +21,7 @@ class MainPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      yOffset: 20,
+      yOffset: 50,
       xOffset: 50,
       nodeHeight: 30,
       nodeWidth: 100,
@@ -29,56 +29,74 @@ class MainPage extends Component {
     }
   }
 
-  yOffsetChanger (yOffset) {
-    this.setState({yOffset: yOffset})
+  yOffsetChanger(yOffset) {
+    this.setState({ yOffset: yOffset })
   }
 
-  xOffsetChanger (xOffset) {
-    this.setState({xOffset: xOffset})
+  xOffsetChanger(xOffset) {
+    this.setState({ xOffset: xOffset })
   }
 
-  nodeWidthChanger (nodeWidth) {
-    this.setState({nodeWidth: nodeWidth})
+  nodeWidthChanger(nodeWidth) {
+    this.setState({ nodeWidth: nodeWidth })
   }
 
-  nodeHeightChanger (nodeHeight) {
-    this.setState({nodeHeight: nodeHeight})
+  nodeHeightChanger(nodeHeight) {
+    this.setState({ nodeHeight: nodeHeight })
+  }
+
+  straightChanger() {
+    this.setState({ pathShape: "straight" })
+  }
+
+  bezierChanger() {
+    this.setState({ pathShape: "bezier" })
+  }
+
+  roundedAnglesChanger() {
+    this.setState({ pathShape: "roundedAngles" })
   }
 
   render() {
     return (
       <div className="main-page">
-        <div className="data-container content-container">
+        <div className="content-container">
           <p className="container-header">Source object</p>
-          <div 
+          <div
             dangerouslySetInnerHTML={{
               __html: prettyHtml(dataJson, dataJson.dimensions)
             }}
           />
         </div>
 
-        <div className="props-container content-container">
+        <div className="content-container">
 
           <p className="container-header">Code</p>
-            <br></br>
+          <br></br>
           <p className="container-header">Properties</p>
           <div className="props-form">
             <p className="fild-name">yOffset</p>
-            <input name="yOffset" type="number" value={this.state.yOffset} className="input-prop"  onChange={event => this.yOffsetChanger(event.target.value)}/>
+            <input name="yOffset" type="number" value={this.state.yOffset} className="input-prop" onChange={event => this.yOffsetChanger(event.target.value)} />
             <p className="fild-name">xOffset</p>
-            <input name="xOffset" type="number" value={this.state.xOffset} className="input-prop"  onChange={event => this.xOffsetChanger(event.target.value)}/> 
+            <input name="xOffset" type="number" value={this.state.xOffset} className="input-prop" onChange={event => this.xOffsetChanger(event.target.value)} />
             <p className="fild-name">nodeWidth</p>
-            <input name="nodeWidth" type="number" value={this.state.nodeWidth} className="input-prop" onChange={event => this.nodeWidthChanger(event.target.value)}/>
+            <input name="nodeWidth" type="number" value={this.state.nodeWidth} className="input-prop" onChange={event => this.nodeWidthChanger(event.target.value)} />
             <p className="fild-name">nodeHeight</p>
-            <input name="nodeHeight" type="number" value={this.state.nodeHeight} className="input-prop" onChange={event => this.nodeHeightChanger(event.target.value)}/>
+            <input name="nodeHeight" type="number" value={this.state.nodeHeight} className="input-prop" onChange={event => this.nodeHeightChanger(event.target.value)} />
             <p className="fild-name">pathShape</p>
-            <input name="pathShape=" type="text" value={this.state.pathShape} className="input-prop input-path-shape"/>
+            <div className="dropdown">
+              <input name="pathShape=" type="text" defaultValue={this.state.pathShape} className="input-prop" />
+              <div className="dropdown-content">
+                <div className="path-shape" onClick={() => this.bezierChanger()}>bezier</div>
+                <div className="path-shape" onClick={() => this.straightChanger()}>straight</div>
+                <div className="path-shape" onClick={() => this.roundedAnglesChanger()}>roundedAngles</div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="tree-container content-container">
-          <Tree 
-          
+        <div className="content-container">
+          <Tree
             data={data}
             nodeContent={node}
             yOffset={Number(this.state.yOffset)}
