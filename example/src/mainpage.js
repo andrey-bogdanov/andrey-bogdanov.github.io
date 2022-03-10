@@ -10,7 +10,14 @@ function node(node) {
       {node.subject}
     </div>
   )
-};
+}
+
+// const exampleTree =
+//   `yOffsetChanger(yOffset) {
+//   this.setState({ 
+//   yOffset: yOffset })
+// }`
+
 
 class MainPage extends Component {
   constructor(props) {
@@ -52,9 +59,13 @@ class MainPage extends Component {
     this.setState({ pathShape: "roundedAngles" })
   }
 
+
   render() {
     return (
       <div className="main-page">
+
+
+
         <div className="content-container">
           <p className="container-header">Source object</p>
           <div
@@ -66,8 +77,14 @@ class MainPage extends Component {
 
         <div className="content-container">
 
-          <p className="container-header">Code</p>
-          <br></br>
+          {/* <p className="container-header">Code</p> */}
+
+          {/* <pre className="prettyprint lang-html" dangerouslySetInnerHTML={{
+            __html: exampleTree
+          }}>
+
+          </pre> */}
+
           <p className="container-header">Properties</p>
           <div className="props-form">
             <p className="fild-name">yOffset</p>
