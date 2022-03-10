@@ -12,11 +12,6 @@ function node(node) {
   )
 };
 
-// function xOffsetFunction(level) {
-//   const offset = 30 + level * 10
-//   return offset
-// };
-
 class MainPage extends Component {
   constructor(props) {
     super(props);
@@ -85,7 +80,7 @@ class MainPage extends Component {
             <input name="nodeHeight" type="number" value={this.state.nodeHeight} className="input-prop" onChange={event => this.nodeHeightChanger(event.target.value)} />
             <p className="fild-name">pathShape</p>
             <div className="dropdown">
-              <input name="pathShape=" type="text" defaultValue={this.state.pathShape} className="input-prop" />
+              <input name="pathShape=" type="text" value={this.state.pathShape} className="input-prop" />
               <div className="dropdown-content">
                 <div className="path-shape" onClick={() => this.bezierChanger()}>bezier</div>
                 <div className="path-shape" onClick={() => this.straightChanger()}>straight</div>
