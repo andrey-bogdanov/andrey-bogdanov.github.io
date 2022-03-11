@@ -18,6 +18,7 @@
 }
 
 .fild-name {
+  display: block;
   margin: 5px 0 5px 0;
 }
 
@@ -51,6 +52,11 @@
   font-size: 13px;
 }
 
+#pathShape {
+  margin-top: 4px;
+  width: 194px; 
+  height: 22px;
+}
 /* ------------------------- dropdown menu end --------------------- */
 
 .json-pretty {

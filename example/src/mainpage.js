@@ -12,11 +12,11 @@ function node(node) {
   )
 }
 
-// const exampleTree =
-//   `yOffsetChanger(yOffset) {
-//   this.setState({ 
-//   yOffset: yOffset })
-// }`
+const exampleTree =
+  `yOffsetChanger(yOffset) {
+  this.setState({ 
+  yOffset: yOffset })
+}`
 
 
 class MainPage extends Component {
@@ -59,6 +59,11 @@ class MainPage extends Component {
     this.setState({ pathShape: "roundedAngles" })
   }
 
+  pathShapeChanger(pathShape) {
+    this.setState({ pathShape: pathShape })
+  }
+
+
 
   render() {
     return (
@@ -79,22 +84,24 @@ class MainPage extends Component {
 
           {/* <p className="container-header">Code</p> */}
 
-          {/* <pre className="prettyprint lang-html" dangerouslySetInnerHTML={{
+          <pre className="prettyprint lang-html" dangerouslySetInnerHTML={{
             __html: exampleTree
           }}>
 
-          </pre> */}
+          </pre>
 
           <p className="container-header">Properties</p>
           <div className="props-form">
             <p className="fild-name">yOffset</p>
-            <input name="yOffset" type="number" value={this.state.yOffset} className="input-prop" onChange={event => this.yOffsetChanger(event.target.value)} />
+            <input name="yOffset" type="number" min={1} value={this.state.yOffset} className="input-prop" onChange={event => this.yOffsetChanger(event.target.value)} />
             <p className="fild-name">xOffset</p>
-            <input name="xOffset" type="number" value={this.state.xOffset} className="input-prop" onChange={event => this.xOffsetChanger(event.target.value)} />
+            <input name="xOffset" type="number" min={10} value={this.state.xOffset} className="input-prop" onChange={event => this.xOffsetChanger(event.target.value)} />
             <p className="fild-name">nodeWidth</p>
             <input name="nodeWidth" type="number" value={this.state.nodeWidth} className="input-prop" onChange={event => this.nodeWidthChanger(event.target.value)} />
             <p className="fild-name">nodeHeight</p>
-            <input name="nodeHeight" type="number" value={this.state.nodeHeight} className="input-prop" onChange={event => this.nodeHeightChanger(event.target.value)} />
+            <input name="nodeHeight" type="number" min={20} value={this.state.nodeHeight} className="input-prop" onChange={event => this.nodeHeightChanger(event.target.value)} />
+
+
             <p className="fild-name">pathShape</p>
             <div className="dropdown">
               <input name="pathShape=" type="text" value={this.state.pathShape} className="input-prop" />
@@ -104,6 +111,14 @@ class MainPage extends Component {
                 <div className="path-shape" onClick={() => this.roundedAnglesChanger()}>roundedAngles</div>
               </div>
             </div>
+
+            <label for="pathShape" className="fild-name">pathShape</label>
+            <select value={this.state.pathShape} name="pathShape" id="pathShape" onChange={(event) => this.pathShapeChanger(event.target.value)}>
+              <option value="bezier">bezier</option>
+              <option value="straight">straight</option>
+              <option value="roundedAngles">roundedAngles</option>
+            </select>
+
           </div>
         </div>
 
