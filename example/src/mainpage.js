@@ -84,11 +84,11 @@ class MainPage extends Component {
 
           {/* <p className="container-header">Code</p> */}
 
-          <pre className="prettyprint lang-html" dangerouslySetInnerHTML={{
+          {/* <pre className="prettyprint lang-html" dangerouslySetInnerHTML={{
             __html: exampleTree
           }}>
 
-          </pre>
+          </pre> */}
 
           <p className="container-header">Properties</p>
           <div className="props-form">
@@ -102,7 +102,7 @@ class MainPage extends Component {
             <input name="nodeHeight" type="number" min={20} value={this.state.nodeHeight} className="input-prop" onChange={event => this.nodeHeightChanger(event.target.value)} />
 
 
-            <p className="fild-name">pathShape</p>
+            {/* <p className="fild-name">pathShape</p>
             <div className="dropdown">
               <input name="pathShape=" type="text" value={this.state.pathShape} className="input-prop" />
               <div className="dropdown-content">
@@ -110,7 +110,7 @@ class MainPage extends Component {
                 <div className="path-shape" onClick={() => this.straightChanger()}>straight</div>
                 <div className="path-shape" onClick={() => this.roundedAnglesChanger()}>roundedAngles</div>
               </div>
-            </div>
+            </div> */}
 
             <label for="pathShape" className="fild-name">pathShape</label>
             <select value={this.state.pathShape} name="pathShape" id="pathShape" onChange={(event) => this.pathShapeChanger(event.target.value)}>
