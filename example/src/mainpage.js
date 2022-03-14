@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Tree } from "tree-graph-flex";
-import "./mainPage.css"
+import "./mainpage.css"
 import { data, dataJson } from "./exampleData"
 import prettyHtml from "json-pretty-html"
 
