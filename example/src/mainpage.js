@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { TreeGraphFlex } from "tree-graph-flex";
 import "./mainpage.css"
 import { data, dataJson } from "./exampleData"
+import { prettyHtml } from "json-pretty-html"
 
 function node(node) {
   return (
@@ -65,7 +66,7 @@ class MainPage extends Component {
     this.setState({ direction: "reverse" })
   }
 
-  directionChanger() {
+  directionChanger(direction) {
     this.setState({ direction: direction })
   }
 
@@ -83,7 +84,6 @@ class MainPage extends Component {
         </div>
 
         <div className="content-container">
-
           <p className="container-header">Properties</p>
           <div className="props-form">
             <p className="fild-name">yOffset</p>
