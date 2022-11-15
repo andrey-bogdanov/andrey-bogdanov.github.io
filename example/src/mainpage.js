@@ -20,7 +20,8 @@ class MainPage extends Component {
       xOffset: 50,
       nodeHeight: 30,
       nodeWidth: 100,
-      pathShape: "bezier"
+      pathShape: "bezier",
+      direction: "forward"
     }
   }
 
@@ -56,6 +57,18 @@ class MainPage extends Component {
     this.setState({ pathShape: pathShape })
   }
 
+  directionForwardChanger() {
+    this.setState({ direction: "forward" })
+  }
+
+  directionReverseChanger() {
+    this.setState({ direction: "reverse" })
+  }
+
+  directionChanger() {
+    this.setState({ direction: direction })
+  }
+
   render() {
     return (
       <div className="main-page">
@@ -87,7 +100,10 @@ class MainPage extends Component {
               <option value="straight">straight</option>
               <option value="roundedAngles">roundedAngles</option>
             </select>
-
+            <select value={this.state.direction} name="direction" id="direction" onChange={(event) => this.directionChanger(event.target.value)}>
+              <option value="forward">forward</option>
+              <option value="reverse">reverse</option>
+            </select>
           </div>
         </div>
 
@@ -100,6 +116,7 @@ class MainPage extends Component {
             nodeWidth={Number(this.state.nodeWidth)}
             nodeHeight={Number(this.state.nodeHeight)}
             pathShape={this.state.pathShape}
+            direction={this.state.direction}
           />
         </div>
       </div>
