@@ -29,14 +29,17 @@
 .input-prop {
   width: 185px;
 }
+
 /* ------------------------- dropdown menu start--------------------- */
 
-.dropdown:hover .dropdown-content{
+.dropdown:hover .dropdown-content {
   display: block;
   cursor: pointer;
 }
 
-.dropdown-content div:hover {background-color: rgb(243, 243, 243);}
+.dropdown-content div:hover {
+  background-color: rgb(243, 243, 243);
+}
 
 .dropdown-content {
   display: none;
@@ -52,11 +55,18 @@
   font-size: 13px;
 }
 
-#pathShape {
+#direction {
   margin-top: 4px;
-  width: 194px; 
+  width: 194px;
   height: 22px;
 }
+
+#pathShape {
+  margin-top: 4px;
+  width: 194px;
+  height: 22px;
+}
+
 /* ------------------------- dropdown menu end --------------------- */
 
 .json-pretty {
@@ -80,4 +90,5 @@
 .json-number {
   color: #99c794;
 }
+
 /* ------------------------- json-pretty end--------------------- */

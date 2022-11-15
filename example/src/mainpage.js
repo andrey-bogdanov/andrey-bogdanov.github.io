@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { TreeGraphFlex } from "tree-graph-flex";
 import "./mainpage.css"
 import { data, dataJson } from "./exampleData"
-import { prettyHtml } from "json-pretty-html"
+import prettyHtml from "json-pretty-html"
 
 function node(node) {
   return (
@@ -71,6 +71,8 @@ class MainPage extends Component {
   }
 
   render() {
+    console.log("prettyHtml", prettyHtml);
+
     return (
       <div className="main-page">
 
@@ -100,6 +102,7 @@ class MainPage extends Component {
               <option value="straight">straight</option>
               <option value="roundedAngles">roundedAngles</option>
             </select>
+            <label for={this.state.direction} className="fild-name">direction</label>
             <select value={this.state.direction} name="direction" id="direction" onChange={(event) => this.directionChanger(event.target.value)}>
               <option value="forward">forward</option>
               <option value="reverse">reverse</option>
