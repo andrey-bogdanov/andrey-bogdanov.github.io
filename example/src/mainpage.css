@@ -15,6 +15,13 @@
   border-color: rgb(173, 173, 173);
   border-radius: 5px;
   padding: 10px;
+  justify-content: center;
+
+}
+
+.diagram {
+  display: flex;
+  justify-content: center;
 }
 
 .fild-name {
@@ -59,12 +66,27 @@
   margin-top: 4px;
   width: 194px;
   height: 22px;
+  cursor: pointer;
+}
+
+#direction:hover,
+#pathShape:hover {
+  background-color: rgb(230, 229, 230);
+}
+
+input {
+  cursor: pointer
+}
+
+input:hover {
+  background-color: rgb(230, 229, 230);
 }
 
 #pathShape {
   margin-top: 4px;
   width: 194px;
   height: 22px;
+  cursor: pointer;
 }
 
 /* ------------------------- dropdown menu end --------------------- */

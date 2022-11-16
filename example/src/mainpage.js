@@ -110,7 +110,7 @@ class MainPage extends Component {
           </div>
         </div>
 
-        <div className="content-container">
+        <div className="content-container diagram">
           <TreeGraphFlex
             data={data}
             nodeContent={node}
